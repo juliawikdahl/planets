@@ -1,0 +1,199 @@
+ @import url('https://fonts.googleapis.com/css2?family=Lora&family=Roboto+Condensed:wght@300&family=Secular+One&display=swap');
+
+.blue-background {
+    background: linear-gradient(90deg, #0C164D 0%, #190B22 100%);
+    height: 100vh;
+    color: white;
+}
+
+.container {
+    max-width: 1800px; 
+    margin-top: 4rem;
+    text-align: end;
+    letter-spacing: 0.8rem;
+}
+
+.solen {
+    position: absolute;
+    right: 90%; 
+    width: 100%;
+    height: 160%; 
+    background-color: rgba(255, 208, 41, 1); 
+    border-radius: 50%; 
+}
+
+h1 {
+    font-size: 60px;
+    margin: 0;
+    font-family: 'Secular One', sans-serif; 
+}
+
+h2 {
+    margin: 0;
+    font-size: 24px;
+    color: rgba(255, 208, 41, 1);
+    font-family: 'Lora', serif;
+}
+
+p {
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.planets-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10rem;
+}
+
+.planet {
+    cursor: pointer;
+    margin: 3rem;
+}
+
+
+.merkurius {
+    width: 20px; 
+    height: 20px; 
+    background-color: #999; 
+    border-radius: 50%; 
+}
+
+.venus {
+  width: 30px; 
+  height: 30px; 
+  background-color: lightpink; 
+  border-radius: 50%; 
+}
+
+.jorden {
+    width: 30px; 
+    height: 30px; 
+    background-color: rgb(45, 102, 245);
+    border-radius: 50%; 
+  }
+
+  .mars {
+    width: 20px; 
+    height: 20px; 
+    background-color: rgb(225, 60, 60);
+    border-radius: 50%; 
+  }
+
+  .jupiter {
+    width: 150px; 
+    height: 150px; 
+    background-color: rgb(238, 126, 85);
+    border-radius: 50%; 
+  }
+
+  .saturnus {
+    width: 120px; 
+    height: 120px; 
+    background: rgba(199, 170, 114, 1);
+    border-radius: 50%; 
+    position: relative;
+   
+    
+  }
+
+  .uranus {
+    width: 60px; 
+    height: 60px; 
+    background-color: lightgray;
+    border-radius: 50%; 
+  }
+
+  .neptunus {
+    width: 60px; 
+    height: 60px; 
+    background-color: rgb(116, 116, 137);
+    border-radius: 50%; 
+  }
+
+
+  .saturnus::before {
+    content: '';
+    position: absolute;
+    width: 160px; 
+    height: 6px; 
+    background-color: #ccc; 
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%) rotate(150deg); 
+    border-radius: 50%; 
+    
+}
+
+.overlay {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.overlay-background {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    cursor: pointer;
+}
+
+.overlay-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 80px 150px 80px 150px;
+    background-color: rgb(27, 27, 71);
+    border-radius: 5px;
+    overflow: hidden;
+    width: 50vw;
+    height: 60vh;
+   
+}
+
+.overlay-content h1, h2 {
+    letter-spacing: 0.6rem;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+
+}
+
+.planet-desc {
+    line-height: 2rem;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.border {
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    margin-bottom: 1rem;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 0.5rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+h3 {
+    font-weight: normal;
+    font-family: 'Secular One', sans-serif;
+}
+
+.overlayPlanet {
+    position: absolute;
+    bottom: 10px; 
+    right: 10px;
+}

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="">
+    <title></title>
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="blue-background">
+
+    <header class="container">
+         <h1>SOLSYSTEMET</h1>
+         <h2>SOLARIS</h2>
+    </header>
+
+
+    <section id="planets-container" class="planets-container">
+      
+        <div class="overlay" id="overlay">
+            <div class="overlay-background" onclick="closeOverlay()"></div>
+            <div class="overlay-content" id="overlay-content">
+                <button class="close-btn" onclick="closeOverlay()">&times;</button>
+
+
+                <article id="planet-info">
+                    <h1 id="planet-name"></h1>
+                    <h2 id="planet-latinName"></h2>
+                    <p id="planet-desc" class="planet-desc"></p>
+
+                    <div class="border"></div>
+                    <div class="grid">
+                        <div>
+                            <h3>OMKRETS</h3>
+                            <p id="planet-circumference"></p>
+                        </div>
+                        <div>
+                            <h3>KM FRÅN SOLEN</h3>
+                            <p id="planet-distance"></p>
+                        </div>
+                        
+                        <div>
+                            <h3>MAX TEMPERATUR</h3>
+                            <p id="max-temp"></p>
+                        </div>
+                        
+                        <div>
+                            <h3>MIN TEMPERATUR</h3>
+                            <p id="min-temp"></p>
+                        </div>
+                        
+                    </div>
+                    <div class="border"></div>
+                    
+                    <div id="moons-container">
+                        <h3>MÅNAR</h3>
+                        <p id="moons"></p>
+                    </div>
+                        
+                  
+                    
+
+                </article>
+            </div>
+        </div>
+    
+
+        
+
+    </section>
+
+    
+    
+    
+    
+
+   <script src="script.js"></script>
+</body>
+</html>
