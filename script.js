@@ -27,7 +27,6 @@ async function fetchData() {
                 console.error('Invalid data format received from the API');
             }
 
-            
         } else {
             console.error('Error fetching API key');
         }
@@ -43,11 +42,7 @@ function displayPlanets(planets) {
     planets.forEach(planet => {
         const planetElement = document.createElement('div');
         planetElement.className = 'planet';
-
-        planetElement.dataset.hasMoons = planet.moons.length > 0;
-
         planetElement.classList.add(planet.name.toLowerCase());
-
         planetElement.onclick = () => showPlanetInfo(planet);
         planetsContainer.appendChild(planetElement);
     }) 
@@ -67,7 +62,7 @@ function showPlanetInfo(planet) {
     const minTemp = document.getElementById('min-temp');
     const moons = document.getElementById('moons');
     const moonsContainer = document.getElementById('moons-container');
-
+    const overlaySun = document.querySelector('.overlay .solen');
 
     if (overlay && overlayContent) {
         overlay.style.display = 'block';
@@ -86,13 +81,11 @@ function showPlanetInfo(planet) {
                 const separator = (index > 0) ? ', ' : ''; 
                 return separator + moons;
             });
-
             const maxMoonsPerRow = 20;
             const moonsRow = [];
             for (let i = 0; i < moonsArray.length; i += maxMoonsPerRow) {
                 moonsRow.push(moonsArray.slice(i, i + maxMoonsPerRow).join(''));
             }
-
             moons.textContent = moonsRow;
         }
     }
@@ -112,27 +105,23 @@ function showPlanetInfo(planet) {
         overlayPlanet.classList.add(planet.name.toLowerCase());
         overlayContent.appendChild(overlayPlanet);   
     }
-
+    
+    if(overlaySun) {
+        overlaySun.style.backgroundColor = getComputedStyle(document.querySelector(`.${planet.name.toLowerCase()}`)).backgroundColor;
+    }
   
-   
 }
 
-
-
 function closeOverlay() {
-    const overlay = document.getElementById('overlay')
     if(overlay) {
         overlay.style.display = 'none'
     }
-
     // nollställer overlayplaneterna vid varje öppning av planet så att det inte blir dubbletter
     if(overlayPlanet) {
         overlayPlanet.remove();
         overlayPlanet = null;
     }
 }
-
-
 
 overlay.addEventListener('click', (event) => {
         if (event.target === overlay) {

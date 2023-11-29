@@ -9,11 +9,11 @@
 
 .blue-background {
     background: linear-gradient(90deg, #0C164D 0%, #190B22 100%);
-    
 }
 
 .container {
-    max-width: 1800px; 
+   max-width: 2500px; 
+    margin-right: 4rem;
     margin-top: 4rem;
     text-align: end;
     letter-spacing: 0.8rem;
@@ -57,39 +57,38 @@ p {
     margin: 3rem;
 }
 
-
 .merkurius {
     width: 20px; 
     height: 20px; 
-    background-color: #999; 
+    background-color: rgba(136, 136, 136, 1);
     border-radius: 50%; 
 }
 
 .venus {
   width: 30px; 
   height: 30px; 
-  background-color: lightpink; 
+  background-color: rgba(231, 205, 205, 1);
   border-radius: 50%; 
 }
 
 .jorden {
     width: 30px; 
     height: 30px; 
-    background-color: rgb(45, 102, 245);
+    background-color: rgba(66, 142, 212, 1);
     border-radius: 50%; 
   }
 
   .mars {
     width: 20px; 
     height: 20px; 
-    background-color: rgb(225, 60, 60);
+    background-color: rgba(239, 95, 95, 1);
     border-radius: 50%; 
   }
 
   .jupiter {
     width: 150px; 
     height: 150px; 
-    background-color: rgb(238, 126, 85);
+    background-color: rgba(226, 148, 104, 1);
     border-radius: 50%; 
   }
 
@@ -99,21 +98,19 @@ p {
     background: rgba(199, 170, 114, 1);
     border-radius: 50%; 
     position: relative;
-   
-    
   }
 
   .uranus {
     width: 60px; 
     height: 60px; 
-    background-color: lightgray;
+    background-color: rgba(201, 212, 241, 1);
     border-radius: 50%; 
   }
 
   .neptunus {
     width: 60px; 
     height: 60px; 
-    background-color: rgb(116, 116, 137);
+    background-color: rgba(122, 145, 167, 1);
     border-radius: 50%; 
   }
 
@@ -144,8 +141,33 @@ p {
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
-    cursor: pointer;
+    background:rgb(27, 27, 71) url('bilder/stars.svg');
+}
+
+.sun {
+    position: absolute;
+    border-radius: 50%;
+}
+
+.overlay .solen {
+    margin-top: -15rem;
+    z-index: 1;
+}
+
+.sun2 {
+    right: 88%; 
+    width: 100%;
+    height: 160%; 
+    margin-top: -15rem;
+    background-color: rgba(66, 142, 212, 0.1); 
+}
+
+.sun3 {
+    right: 86%; 
+    width: 100%;
+    height: 160%; 
+    margin-top: -15rem;
+    background-color: rgba(66, 142, 212, 0.06); 
 }
 
 .overlay-content {
@@ -154,12 +176,11 @@ p {
     left: 50%;
     transform: translate(-50%, -50%);
     padding: 80px 150px 80px 150px;
-    background-color: rgb(27, 27, 71);
+    background:rgb(27, 27, 71) url('bilder/stars.svg');
     border-radius: 5px;
     overflow: hidden;
     width: 50vw;
-    height: 60vh;
-   
+    height: 60vh;  
 }
 
 .overlay-content h1, h2 {
@@ -170,9 +191,11 @@ p {
     position: absolute;
     top: 10px;
     right: 10px;
-    font-size: 20px;
+    font-size: 50px;
     cursor: pointer;
-
+    background: none;
+    border: none;
+    color: white;
 }
 
 .planet-desc {
@@ -201,13 +224,17 @@ h3 {
 .overlayPlanet {
     position: absolute;
     bottom: 10px; 
-    right: 13px;
+    right: 10px;
 }
 
 .footer {
-    margin-top: auto; 
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 6rem; 
+    z-index: 4;
 }
