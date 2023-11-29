@@ -18,14 +18,11 @@
     </header>
 
 
-    <section id="planets-container" class="planets-container">
-      
-        <div class="overlay" id="overlay">
+    <main id="planets-container" class="planets-container">
+        <article class="overlay" id="overlay">
             <div class="overlay-background" onclick="closeOverlay()"></div>
-            <div class="overlay-content" id="overlay-content">
+            <aside class="overlay-content" id="overlay-content">
                 <button class="close-btn" onclick="closeOverlay()">&times;</button>
-
-
                 <article id="planet-info">
                     <h1 id="planet-name"></h1>
                     <h2 id="planet-latinName"></h2>
@@ -41,17 +38,14 @@
                             <h3>KM FRÅN SOLEN</h3>
                             <p id="planet-distance"></p>
                         </div>
-                        
                         <div>
                             <h3>MAX TEMPERATUR</h3>
                             <p id="max-temp"></p>
                         </div>
-                        
                         <div>
                             <h3>MIN TEMPERATUR</h3>
                             <p id="min-temp"></p>
                         </div>
-                        
                     </div>
                     <div class="border"></div>
                     
@@ -59,24 +53,17 @@
                         <h3>MÅNAR</h3>
                         <p id="moons"></p>
                     </div>
-                        
-                  
-                    
-
                 </article>
-            </div>
-        </div>
-    
+            </aside>
+        </article>
+    </main>
 
-        
-
-    </section>
-
-    
-    
-    
-    
+    <footer class="footer">
+        <img src="bilder/footer.svg" alt="footer-logo" >
+    </footer>
+   
 
    <script src="script.js"></script>
 </body>
 </html>
+
